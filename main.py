@@ -22,8 +22,15 @@ methods = ''
 # methods = methods_list['BHATTACHARYYA']
 
 bf_path = os.getcwd()+'/img/bf_img/' # 현재 디렉토리 내 모든 PNG 파일 경로 리스트
+af_path = os.getcwd()+"/img/af_img/" # temp 폴더 생성
 temp_path = os.getcwd()+"/img/temp/" # temp 폴더 생성
-create_directory(temp_path)          # 디렉토리 생성
+
+# 디렉토리 생성
+create_directory(temp_path)
+create_directory(bf_path)
+create_directory(af_path+"img")
+create_directory(af_path+"same")
+create_directory(af_path+"gif")
 
 # 이미지 temp folder copy
 for file_name in os.listdir(bf_path):
